@@ -21,7 +21,8 @@ def fib(n):
     if n == 0 or n == 1:
         return 1
     else:
-        fibCount += 1
+        if n-1 == 2 or n-2 == 2: # Should specify when we're calling fib(2), not just the n != 0 or 1
+            fibCount += 1
         return fib(n-1) + fib(n-2)
     
 def testFib(n):
